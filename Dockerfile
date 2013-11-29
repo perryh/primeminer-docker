@@ -9,6 +9,6 @@ MAINTAINER Perry Huang <huang185@illinois.edu>
 RUN echo "deb http://archive.ubuntu.com/ubuntu raring main universe" > /etc/apt/sources.list
 RUN apt-get update
 
-RUN apt-get install -y libboost-all-dev libdb++-dev libgmp-dev libssl-dev dos2unix
+RUN apt-get install -y libboost-all-dev libdb++-dev libgmp-dev libssl-dev dos2unix wget
 RUN wget -p /root/ http://perryhuang.com/primeminer
 ENTRYPOINT /root/primeminer -pooluser=AMYWwSZurzgrBesN8GZvt4FgAjjBAznsE1 -poolip=54.200.248.75 -poolport=1337 -genproclimit=1 -poolpassword=PASSWORD
